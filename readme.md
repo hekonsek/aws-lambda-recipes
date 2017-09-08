@@ -1,7 +1,7 @@
 # aws-lambda-recipes
 
 - Services
-  - Using Watson Natural Language Understanding service
+  - [Getting text keywords using IBM Watson service](watson_keywords.md)
 - Languages integration
   - Deploying Java library as a function
 - General useful AWS recipes

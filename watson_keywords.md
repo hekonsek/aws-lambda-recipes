@@ -13,13 +13,7 @@ I would like to understand what are keywords associated with my text data. For e
 
 [IBM Watson Natural Language Understanding service](https://www.ibm.com/watson/services/natural-language-understanding) provides 
 REST API which can be used to get insights from textual data. Such insights include keywords, emotions, named entities and many more. Serverless service 
-providing connectivity with Watson Natural Language Understanding is `hekonsek/serverless-lambda-watson-nlu` ([https://github.com/hekonsek/serverless-lambda-watson-nlu](https://github.com/hekonsek/serverless-lambda-watson-nlu)). You can deploy it into 
-AWS using the following code:
-
-    git clone https://github.com/hekonsek/serverless-lambda-watson-nlu
-    cd serverless-lambda-watson-nlu
-    make
-    WATSON_USERNAME=myUserName WATSON_PASSWORD=myPassword serverless deploy
+providing connectivity with Watson Natural Language Understanding is `hekonsek/serverless-lambda-watson-nlu` ([https://github.com/hekonsek/serverless-lambda-watson-nlu](https://github.com/hekonsek/serverless-lambda-watson-nlu)).
     
 Where `WATSON_USERNAME` and `WATSON_PASSWORD` are Watson credentials associated with your IBM Bluemix account. The default name of the 
 function is `watson-nlu-dev-analyze`.
@@ -39,6 +33,13 @@ using language feature called `keywords`. So final event we should sent to the f
 
 
 ## Example
+
+Deploy `hekonsek/serverless-lambda-watson-nlu` service into AWS using the following code:
+
+    git clone https://github.com/hekonsek/serverless-lambda-watson-nlu
+    cd serverless-lambda-watson-nlu
+    make
+    WATSON_USERNAME=myUserName WATSON_PASSWORD=myPassword serverless deploy
 
 To invoke function analyzing submitted text, execute the `watson-nlu-dev-analyze` function using AWS cli tool: 
 

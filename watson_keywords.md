@@ -13,7 +13,7 @@ I would like to understand what are keywords associated with my text data. For e
 
 [IBM Watson Natural Language Understanding service](https://www.ibm.com/watson/services/natural-language-understanding) provides 
 REST API which can be used to get insights from textual data. Such insights include keywords, emotions, named entities and many more. Serverless service 
-providing connectivity with Watson Natural Language Understanding is `hekonsek/serverless-lambda-watson-nlu`. You can deploy it into 
+providing connectivity with Watson Natural Language Understanding is `hekonsek/serverless-lambda-watson-nlu` ([https://github.com/hekonsek/serverless-lambda-watson-nlu](https://github.com/hekonsek/serverless-lambda-watson-nlu)). You can deploy it into 
 AWS using the following code:
 
     git clone https://github.com/hekonsek/serverless-lambda-watson-nlu

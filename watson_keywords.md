@@ -15,9 +15,6 @@ I would like to understand what are keywords associated with my text data. For e
 REST API which can be used to get insights from textual data. Such insights include keywords, emotions, named entities and many more. Serverless service 
 providing connectivity with Watson Natural Language Understanding is `hekonsek/serverless-lambda-watson-nlu` ([https://github.com/hekonsek/serverless-lambda-watson-nlu](https://github.com/hekonsek/serverless-lambda-watson-nlu)).
     
-Where `WATSON_USERNAME` and `WATSON_PASSWORD` are Watson credentials associated with your IBM Bluemix account. The default name of the 
-function is `watson-nlu-dev-analyze`.
-
 Event payload format used by Watson NLU function is...
 
     { "watsonCommand": {...} }
@@ -41,7 +38,10 @@ Deploy `hekonsek/serverless-lambda-watson-nlu` service into AWS using the follow
     make
     WATSON_USERNAME=myUserName WATSON_PASSWORD=myPassword serverless deploy
 
-To invoke function analyzing submitted text, execute the `watson-nlu-dev-analyze` function using AWS cli tool: 
+Where `WATSON_USERNAME` and `WATSON_PASSWORD` are Watson credentials associated with your IBM Bluemix account. The default name of the 
+function is `watson-nlu-dev-analyze`.
+
+To analyze text keywords, execute the `watson-nlu-dev-analyze` function and send appropriate event using AWS cli tool: 
 
     $ aws lambda invoke --function-name watson-nlu-dev-analyze --payload \
     '{"watsonCommand": {"text": "I enjoy brazillian jiu-jitsu.", "language": "en", "features": {"keywords":{}}}}' \
